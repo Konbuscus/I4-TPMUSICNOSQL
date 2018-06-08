@@ -30,7 +30,7 @@ namespace Music.Controllers
             //TODO: Le catalogue contiendra toutes les albums, qui eux contiendront tous les artistes
 
 
-            return View(albumList.OrderBy(p=>p.albumPrice).OrderBy(v=>v.albumName).ToList());
+            return View(albumList.OrderBy(p=>p.albumPrice).ThenBy(v=>v.albumName).ToList());
         }
 
         //Retourne la liste des albums avec un tri sur l'année croissante
